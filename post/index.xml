@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Daryl Walleck</title><link>https://darylwalleck.dev/post/</link><description>Recent content in Posts on Daryl Walleck</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 04 Nov 2024 19:47:00 +0000</lastBuildDate><atom:link href="https://darylwalleck.dev/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Why I've Failed at LeetCode</title><link>https://darylwalleck.dev/p/why-ive-failed-at-leetcode/</link><pubDate>Mon, 04 Nov 2024 19:47:00 +0000</pubDate><guid>https://darylwalleck.dev/p/why-ive-failed-at-leetcode/</guid><description>&lt;h1 id="quick-disclaimer">Quick Disclaimer
+&lt;/h1>&lt;p>The point of this post is not to knock LeetCode or companies that use LeetCode as part of their interview process. I do think there are alternate ways to judge a candidate&amp;rsquo;s level of
+experience, but every company has the right to choose their approach.
+What I&amp;rsquo;m trying to convey is that everyone&amp;rsquo;s journey to becoming successful with LeetCode/DSA
+problems can look different, even if some of the conclusions reached end up being the same.&lt;/p>
+&lt;h1 id="setting-the-stage">Setting the Stage
+&lt;/h1>&lt;p>This is one of my favorite quotes from any book, and it seems especially relevant now.&lt;/p>
+&lt;blockquote>
+&lt;p>A journey will have pain and failure. It is not only the steps forward that we must accept. It is the stumbles. The trials. The knowledge that we &lt;strong>will&lt;/strong> fail. That we &lt;strong>will&lt;/strong> hurt those around us.&lt;/p>
+&lt;p>But if we stop, if we accept the person we are when we fall, the journey ends. That failure becomes our destination.
+To love the journey is to accept no such end. I have found, through painful experience, that the most important step a person can take is always the &lt;em>next&lt;/em> one.&lt;/p>
+&lt;/blockquote>
+&lt;p>Dalinar from &lt;em>Oathbringer&lt;/em>, by Brandon Sanderson&lt;/p>
+&lt;h1 id="my-confession">My Confession
+&lt;/h1>&lt;p>As a developer with 17 years of experience, I had a meltdown and
+bombed a LeetCode easy question. I didn&amp;rsquo;t just not come up with correct solution.
+I coded like I had no idea what I was doing. So, how in the world did I reach that point?&lt;/p>
+&lt;h1 id="my-situation">My Situation
+&lt;/h1>&lt;p>I was laid off almost two months ago, so you can imagine my excitement when a company
+reached out and was interested in interviewing me. The first round of interviews
+was scheduled to be behavioral and architecture questions, so naturally I put on
+my STAR hat to come up with scenarios to talk about and did a deep dive on
+system architecture, as I haven&amp;rsquo;t had architecture in many interviews before.
+I poured hours into preparing myself because this was also a dream position for
+me with life-changing salary. I walked into the interview feeling
+like I was ready for anything.&lt;/p>
+&lt;h1 id="the-interview">The Interview
+&lt;/h1>&lt;p>The first portion of the interview went well as it was the standard &amp;ldquo;explain to me
+in detail things you&amp;rsquo;ve built&amp;rdquo;. If you can&amp;rsquo;t tell, I can talk about things I&amp;rsquo;ve done all day long. We were about two-thirds of the way done and I was
+confident I had the interview in the bag. Then, the interviewer said we needed to switch gears to the coding part of the interview. I&amp;rsquo;m pretty sure I froze like a deer.
+I said that I was told there wouldn&amp;rsquo;t be coding during this interview, to which the
+interviewer said that was a mistake and appologized profusefully. I wasn&amp;rsquo;t remotely in the mindset to battle LeetCode, but saying no wasn&amp;rsquo;t an option. The problem itself
+was actually straightforward:&lt;/p>
+&lt;p>&lt;strong>Given a string &lt;code>s&lt;/code>, find the first non-repeating character in it and return its index. If it does not exist, return &lt;code>-1&lt;/code>.&lt;/strong>&lt;/p>
+&lt;p>(If this looks familiar, it&amp;rsquo;s because it is &lt;a class="link" href="https://leetcode.com/problems/first-unique-character-in-a-string/description/" target="_blank" rel="noopener"
+>LeetCode #387&lt;/a>)&lt;/p>
+&lt;p>The interviewer added some extra complexity, but I don&amp;rsquo;t want to
+give that part away to respect the company. I struggle with anxiety so I was already pretty amped up, but I knew this was something I could handle.
+I even said outloud, &amp;ldquo;Well, I could use the Python Counter (for those who are not Python
+developers, a Counter is a quick way to create a hash set from a list where
+the key in this case was a character, and the value was the number of occurrences
+of the character)&amp;hellip;.but nah, that&amp;rsquo;s too easy and there&amp;rsquo;s
+probably a more efficient way to do this&amp;rdquo;. &lt;strong>I had it. I had 75% of a valid answer in my hands.&lt;/strong>
+The interviewer suggested I try that approach even if it wasn&amp;rsquo;t optimal (hint: always listen to your interviewer). This solution would have been $\mathcal{O}(n)$, which is perfectly fine.&lt;/p>
+&lt;p>Still, I didn&amp;rsquo;t listen because my brain was hyper-focused on what I thought
+was the ideal solution: a two-pointer approach! Why a two pointer approach? I had the vague idea that if I had the left index pointed at a possible unique character, the
+right index could iterate through the characters after it looking for a duplicate, and then jumping the left index to the index of the right if I found a duplicate. After talking through the solution out loud, I dove into coding the solution.&lt;/p>
+&lt;p>I was getting very anxious, and this is when things went off the rails. SiI started making simple mistakes like forgetting the Python typing syntax and forgetting what variable names I
+was using. Everything collapsed when, for some reason, I decided that
+if there were characters repeated multiple times in a row, that was a special
+case I had to handle. Note that at this point I hadn&amp;rsquo;t run my code a &lt;em>single&lt;/em> time.
+I had no idea if anything worked. After a few more minutes, the interviewer suggested
+running my code to see if anything worked. As I mentioned before, there were a ton
+of basic errors that immediately popped up. And then I forgot to print the output
+from my function to see what it was returning. We had already run over the time limit
+we had scheduled, so my interviewer asked me to take my time and send them the
+solution as soon as I finished.&lt;/p>
+&lt;p>After taking five minutes to clear my head, rational thought returned to my
+brain, and I realized how convoluted the solution I was trying to develop was.
+I wiped out most of my code and used a Counter. I hoped because I was allowed extra time to complete the task
+that it meant that the interviewer was confident enough that concerns about
+my coding skills could be smoothed over the final round of interviews. Instead,
+I received my rejection email several days later with an explanation that
+being unprepared for a coding interview was not enough of a justification
+for my performance, given that it was a staff-level position.&lt;/p>
+&lt;h1 id="the-fallout">The Fallout
+&lt;/h1>&lt;p>After I closed that email, my brain was in a state of absolute
+shock and shame. I just blew a life-changing job because I couldn&amp;rsquo;t code
+a solution for a relatively simple problem. I spent the next day rapidly
+repeating the stages of grief. I had to be an awful developer. I was a fraud.
+I failed my family. I must have made it this far because of the teams I
+worked with. I had been laid off three times in 18 months. Maybe I couldn&amp;rsquo;t
+cut it anymore? Maybe I wasn&amp;rsquo;t that good? Maybe I never was?&lt;/p>
+&lt;h1 id="turning-the-corner">Turning the Corner
+&lt;/h1>&lt;p>You see, we are our own best and worst storytellers. It&amp;rsquo;s easy to believe our thoughts,
+and it&amp;rsquo;s challenging to work against them. Since I was just sitting around and definitely didn&amp;rsquo;t want to touch a computer, I took my wife&amp;rsquo;s advice and listened to audiobooks. There was one book in particular called &lt;em>Self Compassion&lt;/em> that my wife had been begging me to read for years. The book&amp;rsquo;s tagline started with &amp;ldquo;Stop beating yourself up&amp;rdquo;, so it seemed like the medicine I needed. I&amp;rsquo;ll save the details of my experiences
+with that book for another time. Still, one of the core concepts I walked away with
+was that beyond recognizing a thought or feeling and acknowledging it, anything
+more was only causing suffering, which serves no purpose. Beating yourself up has no correlation with actually improving a skill. Something about the
+experience snapped my brain back into focus, and I knew what I had to do. There
+had to be something valuable I could take away from this experience.&lt;/p>
+&lt;h1 id="being-curious">Being Curious
+&lt;/h1>&lt;p>One of my ADHD coach&amp;rsquo;s approaches to dealing with challenges was &amp;ldquo;to get curious&amp;rdquo;
+about problematic things in our lives. So, as painful as it was, I started walking
+through the coding portion of the interview step-by-step in my head. Some of
+the obvious observations I made were:&lt;/p>
+&lt;ul>
+&lt;li>I ignored a suggestion my interviewer made&lt;/li>
+&lt;li>I talked through my solution without writing a single thing down&lt;/li>
+&lt;li>I didn&amp;rsquo;t verify my solution at all&lt;/li>
+&lt;li>I waited far too long to run my code&lt;/li>
+&lt;/ul>
+&lt;p>My initial conclusion was that I wasn&amp;rsquo;t as methodical
+as I could have been. This was far from my first coding interview, but I thought back
+and realized I had never done any of those things in my interviews. Why not?
+They sound like common sense. As I started to beat myself up, I took a step back,
+forgave myself for not doing those things before, and turned my focus on the &amp;ldquo;why&amp;rdquo;
+of the whole thing. Out of the blue, all the answers suddenly snapped into
+place.&lt;/p>
+&lt;h1 id="its-always-adhd-under-the-vilians-mask">It&amp;rsquo;s Always ADHD Under the Vilian&amp;rsquo;s Mask
+&lt;/h1>&lt;p>I didn&amp;rsquo;t know I had ADHD until about 8 years ago, so I thought I had already mostly figured
+out how to navigate my career by writing everything down so I wouldn&amp;rsquo;t forget things and
+asking for help with accountability for deadlines. Focus was something I previously
+managed with caffeine and later used medications to help with. However, I never got
+curious if it impacted how I actually coded. As I was reflecting on how I developed code,
+I pulled up one of the lists of how ADHD impacts people&amp;rsquo;s lives for thoughts.
+One line jumped out at me: &amp;ldquo;Limited working memory&amp;rdquo;. This is a fancy way of saying
+that someone with ADHD may not be able to keep as many thoughts at the top
+of their mind without forgetting something or having the details scrambled.
+This is why many people with ADHD depend on note-taking or scheduling apps to manage their lives; it&amp;rsquo;s just that hard to keep things in order. As a developer, this
+is also why I make architecture and flow diagrams and keep a strict list of tasks
+in whatever task-tracking systems I use. I &lt;strong>need&lt;/strong> those visual reminders
+to stay on track. I flipped back to the &amp;ldquo;common sense&amp;rdquo; advice I wrote about earlier
+and realized those weren&amp;rsquo;t optional steps in my coding interview process; they&amp;rsquo;re
+essential.&lt;/p>
+&lt;p>But how have I made it this far in interviews for all
+these years? Memorization. It&amp;rsquo;s the same reason I was a straight-A student in
+high school and barely dragged my way through college. You can easily prep for high
+school exams by cramming enough data into your head to get you through the test,
+but that doesn&amp;rsquo;t work with college courses. I realized I spent far more time first trying
+to memorize exact LeetCode problems and then trying to memorize the general types of
+solutions &lt;em>that I never paid attention to how I was actually coding the solution&lt;/em>.
+I could put together a solution in my mind, but I relied on my mind,
+which was under intense stress and unreliable, to keep all the details of
+the solution in order. When I finally put all the pieces together, I laughed at
+how obvious the problem was.&lt;/p>
+&lt;h1 id="the-solution">The Solution
+&lt;/h1>&lt;p>I may never be a top-tier LeetCode solver, but I can improve
+enough to fail because I&amp;rsquo;ve reached the limits of my knowledge rather than my
+brain giving out on me. What I&amp;rsquo;ve tried and has worked so far in the limited
+time I&amp;rsquo;ve had is the handy old checklist. I&amp;rsquo;m not saying this should
+be everyone&amp;rsquo;s checklist; I hope this will work for me and make others curious enough to evaluate their own processes and do the same.&lt;/p>
+&lt;ul>
+&lt;li>Read the problem carefully.&lt;/li>
+&lt;li>Add a comment in your coding window of the problem you&amp;rsquo;re solving in case your mind wanders&lt;/li>
+&lt;li>Pseudo-code the solution on paper or in the code editor. This frees your brain from trying to remember your plan.&lt;/li>
+&lt;li>If you have time, draw out how the solution works. Now, you have multiple reminders of your approach to the problem.&lt;/li>
+&lt;li>Code in short, iterative bits and run it often. Make sure either your brain hasn&amp;rsquo;t wandered off the path or that you&amp;rsquo;ve found a problem with your solution.&lt;/li>
+&lt;li>Check back in with your notes often and check off each section of psuedo-code as you complete it.&lt;/li>
+&lt;/ul>
+&lt;p>The critical point for me is the visual reminders. My ADHD coach likes to say, &amp;ldquo;if you
+can&amp;rsquo;t see it, it doesn&amp;rsquo;t exist&amp;rdquo;. Under stress, I think that&amp;rsquo;s a critical observation
+for me.&lt;/p>
+&lt;h1 id="the-end">The End?
+&lt;/h1>&lt;p>This whole blob of text began as a LinkedIn post that I made on a whim
+as a reminder that we all fail sometimes, and if we can learn something
+from that failure, then maybe future results will be better. The response
+to that post has been overwhelming, to say the least. I hope to use this
+as a springboard to keep blogging (I&amp;rsquo;ve only been trying to start that
+for a decade) and share my thoughts and experiences with coding, testing, test automation, and neurodiversity in tech. To everyone who responded to me on LinkedIn and to everyone who reads this, thank you for giving me the reason and the courage to start sharing my thoughts.&lt;/p>
+&lt;p>Sometimes knowing the answer or what you should do isn&amp;rsquo;t enough. I had to walk
+the path, experience the pain, and have my own revelation for it to be concrete and
+real to me. It was only then that it was &amp;ldquo;real&amp;rdquo; and meaningful to me.&lt;/p></description></item></channel></rss>
