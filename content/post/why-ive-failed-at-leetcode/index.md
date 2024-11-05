@@ -1,7 +1,7 @@
 ---
 title: Why I've Failed at LeetCode
 description: We all make mistakes. Learning from them is what we owe ourselves.
-date: 2024-11-04 19:47:00+0000
+date: 2024-10-31 00:00:00+0000
 math: true
 ---
 
