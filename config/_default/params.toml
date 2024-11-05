@@ -17,9 +17,9 @@ emoji = "🍥"
 subtitle = "Development. Test Automation. ADHD. Bad dad jokes."
 
 [sidebar.avatar]
-enabled = true
+enabled = false
 local = true
-src = "img/avatar.png"
+src = "img/dcs-logo2.png"
 
 [article]
 headingAnchor = false
@@ -76,7 +76,7 @@ enabled = true
 
 ## Comments
 [comments]
-enabled = true
+enabled = false
 provider = "disqus"
 
 [comments.disqusjs]

@@ -1,20 +1,22 @@
 ---
-title: Why I Fail at Leetcode
-description: Useful shortcodes that can be used in Markdown
+title: Why I've Failed at LeetCode
+description: We all make mistakes. Learning from them is what we owe ourselves.
 date: 2024-10-31 00:00:00+0000
+math: true
 ---
 
 # Quick Disclaimer
 
-The point of this post is not to knock LeetCode or companies that use LeetCode as part of their interview process.
-I'm trying to convey that everyone's journey to success at LeetCode/DSA
-problems can look different, even if some of the conclusions reached end up being
-standard advice.
+The point of this post is not to knock LeetCode or companies that use LeetCode as part of their interview process. I do think there are alternate ways to judge a candidate's level of
+experience, but every company has the right to choose their approach.
+What I'm trying to convey is that everyone's journey to being successful with LeetCode/DSA
+problems can look different, even if some of the conclusions reached end up being the same.
 
 # My Confession
 
 As a developer with 17 years of experience, I had a meltdown and
-bombed a LeetCode easy question. So, how in the world did I reach that point?
+bombed a LeetCode easy question. I didn't just not come up with correct solution.
+I started coding like I did as a day 1 intern. So, how in the world did I reach that point?
 
 I was laid off almost two months ago, so you can imagine my excitement when a company
 reached out and was interested in interviewing me. The first round of interviews
@@ -40,15 +42,16 @@ was actually straightforward:
 
 The interviewer added some extra complexity, but I don't want to
 give that part away to respect the company. I struggle with anxiety so I was already pretty amped up, but I knew this was something I could handle.
-I even said, "Well, I could use the Python Counter class....but nah, there's
-probably a more efficient way to do this". I had it. I had the answer in my hands.
-The interviewer suggested I try that approach even if it wasn't 
-optimal. Still, I didn't listen because my brain was hyper-focused on what I thought
+I even said outloud, "Well, I could use the Python Counter class....but nah, that's too easy and there's
+probably a more efficient way to do this". I had it. I a valid answer in my hands.
+The interviewer suggested I try that approach even if it wasn't optimal (hint: always listen to your interviewer). This solution would have been $\mathcal{O}(n)$, 
+
+Still, I didn't listen because my brain was hyper-focused on what I thought
 was the ideal solution: a two-pointer approach! After talking through the solution aloud, I dove into coding a solution.
 
 I was getting very anxious, and this is when things went off the rails. Simple
 things like forgetting the Python typing syntax and forgetting what variable names I
-was using. When everything collapsed was when, for some reason, I decided that
+was using. Everything collapsed when, for some reason, I decided that
 if there were characters repeated multiple times in a row, that was a special
 case I had to handle. Note that at this point I hadn't run my code a single time.
 I had no idea if anything worked. After a few more minutes, the interviewer suggested
@@ -61,7 +64,7 @@ solution as soon as I finished.
 After taking five minutes to clear my head, rational thought returned to my
 brain, and I realized how convoluted the solution I was trying to develop was.
 I wiped out most of my code and used a Counter (for those who are not Python
-developers, a counter is a quick way to create a hash set from a list where
+developers, a Counter is a quick way to create a hash set from a list where
 the key in this case was a character, and the value was the number of occurrences
 of the character). I hoped because I was allowed extra time to complete the task
 that it meant that the interviewer was confident enough that concerns about
@@ -82,15 +85,15 @@ cut it anymore?
 
 # Turning the Corner
 
-Since I was just sitting around and I definitely didn't want to touch a computer,
+Since I was just sitting around and definitely didn't want to touch a computer,
 I took my wife's advice and listened to audiobooks. There was one book in
 particular called *Self Compassion* that my wife had been begging me to read
 for years. The book's tagline started with "Stop beating yourself up",
 so it seemed like the medicine I needed. I'll save the details of my experiences
 with that book for another time. Still, one of the core concepts I walked away with
 was that beyond recognizing a thought or feeling and acknowledging it, anything
-more was just causing suffering, which has no good purpose. Something about the
-experience snapped my brain back into focus, and I knew what to do. There
+more was only causing suffering, which has no good purpose. Something about the
+experience snapped my brain back into focus, and I knew what I had to do. There
 had to be something valuable I could take away from this experience.
 
 # Being Curious
@@ -100,12 +103,12 @@ about problematic things in our lives. So, as painful as it was, I started walki
 through the coding portion of the interview step-by-step in my head. Some of
 the obvious observations I made were:
 
- - I ignored a suggestion my interviewer made
- - I talked through my solution without writing a single thing down
- - I didn't verify my solution at all
- - I waited far too long to run my code
+- I ignored a suggestion my interviewer made
+- I talked through my solution without writing a single thing down
+- I didn't verify my solution at all
+- I waited far too long to run my code
 
-My straightforward conclusion was that I wasn't as methodical
+My initial conclusion was that I wasn't as methodical
 as I could have been. This was far from my first coding interview, but I thought back
 and realized I had never done any of those things in my interviews. Why not?
 They sound like common sense. As I started to beat myself up, I took a step back,
@@ -124,12 +127,14 @@ I pulled up one of the lists of how ADHD impacts people's lives for thoughts.
 One line jumped out at me: "Limited working memory". This is a fancy way of saying
 that someone with ADHD may not be able to keep as many thoughts at the top
 of their mind without forgetting something or having the details scrambled.
-This is why many people with ADHD depend on note-taking or scheduling apps to manage their lives; it's just really hard to keep things straight. As a developer, this
+This is why many people with ADHD depend on note-taking or scheduling apps to manage their lives; it's just that hard to keep things in order. As a developer, this
 is also why I make architecture and flow diagrams and keep a strict list of tasks
 in whatever task-tracking systems I use. I **need** those visual reminders
-to stay on track. I flipped back to the "common sense" advice I wrote earlier
+to stay on track. I flipped back to the "common sense" advice I wrote about earlier
 and realized those weren't optional steps in my coding interview process; they're
-essential. But how have I made it this far in interviews for all
+essential.
+
+But how have I made it this far in interviews for all
 these years? Memorization. It's the same reason I was a straight-A student in
 high school and barely dragged my way through college. You can easily prep for high
 school exams by cramming enough data into your head to get you through the test,
@@ -143,18 +148,18 @@ how obvious the problem was.
 
 # The Solution
 
-I will probably never be a top-tier LeetCode solver, but I can improve
+I may never be a top-tier LeetCode solver, but I can improve
 enough to fail because I've reached the limits of my knowledge rather than my
 brain giving out on me. What I've tried and has worked so far in the limited
 time I've had is the handy old checklist. I'm not saying this should
-be everyone's checklist; I hope this will work for me and 
-make others curious enough to evaluate their processes and do the same.
+be everyone's checklist; I hope this will work for me and make others curious enough to evaluate their own processes and do the same.
 
- - Read the problem carefully.
- - Add a comment in your coding window of the problem you're solving in case your mind wanders
- - Pseudo-code the solution on paper or in the terminal. This is where I started to go off the rails. This frees your brain from trying to remember your plan.
- - If you have time, draw out how the solution works. Now, you have multiple reminders of your approach to the problem.
- - Code in short, iterative bits and run it often. Make sure either your brain hasn't wandered off the path or that you've found a problem with your solution
+- Read the problem carefully.
+- Add a comment in your coding window of the problem you're solving in case your mind wanders
+- Pseudo-code the solution on paper or in the code editor. This frees your brain from trying to remember your plan.
+- If you have time, draw out how the solution works. Now, you have multiple reminders of your approach to the problem.
+- Code in short, iterative bits and run it often. Make sure either your brain hasn't wandered off the path or that you've found a problem with your solution.
+- Check back in with your notes often and check off each section of psuedo-code as you complete it.
 
 The critical point for me is the visual reminders. My ADHD coach likes to say, "if you
 can't see it, it doesn't exist". Under stress, I think that's a critical observation
